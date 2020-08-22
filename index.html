@@ -27,7 +27,36 @@
         return("Noone wins KEKW");
     }
     else {
-        return("Work in Progress");
+        if (playerSelection == "rock"){
+            switch(computerSelection){
+                case "paper":
+                    return("Paper beats rock! You lose!");
+                    break;
+                case "scissors":
+                    return("Rock beats scissors! You win!");
+                    break;
+            }
+        }
+        else if (playerSelection == "paper"){
+            switch(computerSelection){
+                case "rock":
+                    return("Paper beats rock! You win!");
+                    break;
+                case "scissors":
+                    return("Scissors beat paper! You lose!");
+                    break;
+            }
+        }
+        else if (playerSelection == "scissors"){
+            switch(computerSelection){
+                case "paper":
+                    return("Scissors beat paper! You win!");
+                    break;
+                case "rock":
+                    return("Rock beats scissors! You lose!");
+                    break;
+            }
+        }
     }
     }
     var playerSelection = prompt("Please select between Rock, Paper, Scissors");
