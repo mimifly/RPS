@@ -13,13 +13,13 @@
     function computerPlay() {
         rand = getRndInteger(1,3);
         if (rand == 1){
-            return("Rock");
+            return("rock");
         }
         else if (rand == 2){
-            return("Paper");
+            return("paper");
         }
         else {
-            return("Scissors");
+            return("scissors");
         }
     }
     function playRound(playerSelection, computerSelection) {
@@ -30,7 +30,8 @@
         return("Work in Progress");
     }
     }
-    const playerSelection = "Rock"
+    var playerSelection = prompt("Please select between Rock, Paper, Scissors");
+    playerSelection = playerSelection.toLowerCase();
     const computerSelection = computerPlay()
     console.log(playRound(playerSelection, computerSelection))
   </script>
